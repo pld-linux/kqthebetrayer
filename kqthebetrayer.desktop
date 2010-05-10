@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=KQ The Betrayer
+Comment=Classic RPG game based on KQlives engine.
+Comment[pl]=Klasyczna gra RPG oparta na silniku KQlives
+Icon=kqthebetrayer
+Exec=kqthebetrayer
+Terminal=false
+Type=Application
+Categories=Game;RolePlaying;
+# vi: encoding=utf-8

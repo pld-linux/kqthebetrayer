@@ -1,0 +1,22 @@
+--- configure.ac.orig	2009-02-27 00:22:00.000000000 +0100
++++ configure.ac	2009-02-27 00:23:54.000000000 +0100
+@@ -2,7 +2,7 @@
+ # Process this file with autoconf to produce a configure script.
+ 
+ AC_PREREQ(2.52)
+-AC_INIT(KQ, 0.99, [peterhull90@users.sourceforge.net])
++AC_INIT(KQTheBetrayer, 0.2.7, [peterhull90@users.sourceforge.net])
+ AC_CONFIG_SRCDIR([src/kq.c])
+ AC_CONFIG_HEADER([config.h])
+ AC_CANONICAL_BUILD
+--- Makefile.am.orig	2007-12-12 05:32:22.000000000 +0100
++++ Makefile.am	2009-02-27 00:23:54.000000000 +0100
+@@ -108,7 +108,7 @@
+ 
+ dist_man_MANS = debian/kq.6
+ 
+-AM_CFLAGS = -I$(top_srcdir)/include -DKQ_BIN=\"$(bindir)/kq$(EXEEXT)\" -DKQ_DATA=\"$(pkgdatadir)\" -DKQ_LIB=\"$(pkglibdir)\"
++AM_CFLAGS = -I$(top_srcdir)/include -DKQ_BIN=\"$(bindir)/kqthebetrayer$(EXEEXT)\" -DKQ_DATA=\"$(pkgdatadir)\" -DKQ_LIB=\"$(pkglibdir)\"
+ 
+ if BUNDLE
+ all-local: KQ.app
