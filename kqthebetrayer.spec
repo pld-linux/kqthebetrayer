@@ -11,6 +11,7 @@ Source0:	http://dl.sourceforge.net/kqthebetrayer/%{name}%{version}src.tar.gz
 URL:		http://virtualkingdoms.net/kqthebetrayer/
 Source1:	%{name}.desktop
 Patch0:		%{name}-naming_scheme.patch
+Patch1:		%{name}-install_once.patch
 BuildRequires:	allegro-devel >= 4.2.1
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -35,10 +36,14 @@ Kingdoms fantasy world building project.
 %prep
 %setup -q -n %{name}%{version}src
 %patch0
+%patch1 -p1
 %{__sed} 's/luac/luac50/g' -i scripts/Makefile.{am,in}
+# workaround for not fully cleaned scripts dir from compiled lua files:
+rm scripts/*.lob
 
 %build
 CFLAGS="-I/usr/include/lua50 %{rpmcflags}"
+LDFLAGS="-lm %{rpmldflags}"
 %{__aclocal}
 %{__autoconf}
 %{__automake}
@@ -48,7 +53,8 @@ CFLAGS="-I/usr/include/lua50 %{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install \
+#%{__make} install \
+make install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_desktopdir},%{_pixmapsdir}}

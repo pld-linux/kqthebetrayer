@@ -1,0 +1,82 @@
+--- kqthebetrayer0.2.7src/Makefile.in.orig	2011-02-20 01:38:13.330480759 +0100
++++ kqthebetrayer0.2.7src/Makefile.in	2011-02-20 01:41:51.364339375 +0100
+@@ -340,16 +340,16 @@
+         maps/capital.map maps/haunt.map maps/shrine.map \
+         maps/townx2.map maps/tunnel2.map maps/castle.map \
+         maps/hq.map maps/townx3.map  maps/tunnel.map \
+-        maps/cavex1.map maps/land1.map maps/townx3.map \
++        maps/cavex1.map maps/land1.map \
+         maps/villagex.map
+ 
+ mapdir = $(pkgdatadir)/maps
+ cscripts_DATA = scripts/starting.lob scripts/starting2.lob \
+ 	scripts/townx.lob scripts/glade.lob \
+-        scripts/global.lob scripts/land.lob scripts/starting.lob \
++        scripts/global.lob scripts/land.lob \
+ 	scripts/init.lob scripts/townx4.lob scripts/glade2.lob \
+         scripts/tunnel.lob scripts/tunnel2.lob scripts/villagex.lob \
+-        scripts/capital.lob scripts/hq.lob scripts/townx4.lob \
++        scripts/capital.lob scripts/hq.lob \
+         scripts/haunt.lob scripts/shrine.lob scripts/blacksmith.lob \
+         scripts/cavex1.lob scripts/manorx.lob
+ 
+@@ -360,7 +360,7 @@
+ 	scripts/global.lua scripts/init.lua scripts/townx4.lua \
+         scripts/glade2.lua scripts/tunnel.lua scripts/tunnel2.lua \
+         scripts/villagex.lua scripts/capital.lua scripts/hq.lua \
+-        scripts/townx4.lua scripts/haunt.lua scripts/shrine.lua \
++        scripts/haunt.lua scripts/shrine.lua \
+         scripts/blacksmith.lua scripts/cavex1.lua scripts/manorx.lua \
+         Mac/Info.plist Mac/KQ-icon.icns maps/mapdraw2.glade \
+         other/kq.ico
+@@ -373,7 +373,7 @@
+ 	music/walk.s3m music/comeback.mod music/hm.s3m music/rain.s3m \
+ 	music/waterw.xm music/dag_4.xm music/infanita.mod music/rend5.s3m \
+ 	music/enfero.xm music/into61.s3m music/toroia.s3m music/eranasp.mod \
+-	music/land.mod music/town.mod music/comeback.mod music/grseed.s3m \
++	music/land.mod music/town.mod music/grseed.s3m \
+         music/res.xm music/renc1.s3m
+ 
+ musicdir = $(pkgdatadir)/music
+--- kqthebetrayer0.2.7src/Makefile.am.orig	2011-02-20 01:53:47.971475687 +0100
++++ kqthebetrayer0.2.7src/Makefile.am	2011-02-20 01:55:23.927725504 +0100
+@@ -64,7 +64,7 @@
+         maps/capital.map maps/haunt.map maps/shrine.map \
+         maps/townx2.map maps/tunnel2.map maps/castle.map \
+         maps/hq.map maps/townx3.map  maps/tunnel.map \
+-        maps/cavex1.map maps/land1.map maps/townx3.map \
++        maps/cavex1.map maps/land1.map \
+         maps/villagex.map
+ 
+ 
+@@ -72,10 +72,10 @@
+ 
+ cscripts_DATA = scripts/starting.lob scripts/starting2.lob \
+ 	scripts/townx.lob scripts/glade.lob \
+-        scripts/global.lob scripts/land.lob scripts/starting.lob \
++        scripts/global.lob scripts/land.lob \
+ 	scripts/init.lob scripts/townx4.lob scripts/glade2.lob \
+         scripts/tunnel.lob scripts/tunnel2.lob scripts/villagex.lob \
+-        scripts/capital.lob scripts/hq.lob scripts/townx4.lob \
++        scripts/capital.lob scripts/hq.lob \
+         scripts/haunt.lob scripts/shrine.lob scripts/blacksmith.lob \
+         scripts/cavex1.lob scripts/manorx.lob
+ MOSTLYCLEANFILES = $(cscripts_DATA)
+@@ -86,7 +86,7 @@
+ 	scripts/global.lua scripts/init.lua scripts/townx4.lua \
+         scripts/glade2.lua scripts/tunnel.lua scripts/tunnel2.lua \
+         scripts/villagex.lua scripts/capital.lua scripts/hq.lua \
+-        scripts/townx4.lua scripts/haunt.lua scripts/shrine.lua \
++        scripts/haunt.lua scripts/shrine.lua \
+         scripts/blacksmith.lua scripts/cavex1.lua scripts/manorx.lua \
+         Mac/Info.plist Mac/KQ-icon.icns maps/mapdraw2.glade \
+         other/kq.ico
+@@ -100,7 +100,7 @@
+ 	music/walk.s3m music/comeback.mod music/hm.s3m music/rain.s3m \
+ 	music/waterw.xm music/dag_4.xm music/infanita.mod music/rend5.s3m \
+ 	music/enfero.xm music/into61.s3m music/toroia.s3m music/eranasp.mod \
+-	music/land.mod music/town.mod music/comeback.mod music/grseed.s3m \
++	music/land.mod music/town.mod music/grseed.s3m \
+         music/res.xm music/renc1.s3m
+ 
+ 
