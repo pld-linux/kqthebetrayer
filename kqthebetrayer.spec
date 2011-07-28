@@ -2,10 +2,10 @@ Summary:	Classic RPG game based on KQlives engine
 Summary(pl.UTF-8):	Klasyczna gra RPG oparta na silniku KQlives
 Name:		kqthebetrayer
 Version:	0.2.7
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		X11/Applications/Games
-Source0:	http://dl.sourceforge.net/kqthebetrayer/%{name}%{version}src.tar.gz
+Source0:	http://downloads.sourceforge.net/kqthebetrayer/%{name}%{version}src.tar.gz
 # Source0-md5:	62eca9c1c67db749347e770c62e1f7fd
 #Source1:	%{name}.desktop
 URL:		http://virtualkingdoms.net/kqthebetrayer/
