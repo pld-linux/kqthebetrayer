@@ -35,8 +35,8 @@ Kingdoms fantasy world building project.
 
 %prep
 %setup -q -n %{name}%{version}src
-%patch0
-%patch1 -p1
+%patch -P0
+%patch -P1 -p1
 %{__sed} 's/luac/luac50/g' -i scripts/Makefile.{am,in}
 # workaround for not fully cleaned scripts dir from compiled lua files:
 rm scripts/*.lob
